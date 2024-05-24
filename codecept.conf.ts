@@ -16,7 +16,7 @@ export const config: CodeceptJS.MainConfig = {
       browser: 'chromium',
       emulate: devices['Galaxy S8'], // Emulate Samsung Galaxy S8
       url: 'https://games.lotto24.de',
-      show: true,
+      show: false,
       keepCookies: true
     },
     ChaiWrapper: {
