@@ -12,7 +12,13 @@ To get started with this project, follow the instructions below.
 
 ### Installation
 
+Requirements: node version minimum 18
+
 First, clone the repository and navigate to the project directory:
+
+```bash
+nmv use
+```
 
 ```bash
 git clone https://github.com/yourusername/your-repo.git
@@ -29,3 +35,12 @@ To run the tests, use the following command:
 npm test
 ```
 
+### Reporting
+
+The test results are shown in
+1. [GitHub actions](https://github.com/brahimiarlinda/game-test/actions/workflows/run-tests.yml)
+2. [Testomat](https://app.testomat.io/projects/games-cdeec/runs) where you can ask for permissions
+
+## Todo
+
+1. Create environmental variables for the secrets

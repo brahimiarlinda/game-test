@@ -1,9 +1,7 @@
-import {backToGameButton} from "./support/page-objects/HelpPage";
-
 const {I, Cookies, LandingPage, GamePage, HelpPage} = inject();
 const baseUrl = 'https://games.lotto24.de';
 
-Feature('sample');
+Feature('Navigation to help page');
 
 Scenario('I can navigate from the game page, to the help page and back to the game page',  async () => {
     I.say(`I am on the landing page ${baseUrl}`);
@@ -87,7 +85,7 @@ Scenario('I can navigate from the help page back to the respective game',  async
 
     I.say('I click on the help link');
     I.click(GamePage.helpLink);
-    
+
     I.say('I verify that the button on the help page links back to the correct game');
     I.click(HelpPage.backToGameButton);
     I.seeCurrentUrlEquals(`${baseUrl}/games/hamburgheist`);

@@ -4,16 +4,17 @@
     "private": true,
     "scripts": {
         "test": "codeceptjs run --steps",
+        "test:sync:testomat": "TESTOMATIO=tstmt_k0MxTKm8wzrZv8TzMAXlS-b262YEMPdlqg1716626255 npx check-tests@latest CodeceptJS \"tests/*_test.ts\" --typescript",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps"
     },
     "devDependencies": {
+        "@testomatio/reporter": "^1.4.1",
         "@types/node": "^20.12.12",
         "codeceptjs": "^3.6.2",
         "playwright": "^1.44.1",
         "ts-node": "^10.9.2",
-        "typescript": "^5.4.5"
-    },
-    "dependencies": {
-        "codeceptjs-chai": "^2.3.5"
+        "typescript": "^5.4.5",
+        "codeceptjs-chai": "^2.3.5",
+        "npm": "^10.8.0"
     }
 }

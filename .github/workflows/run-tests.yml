@@ -27,5 +27,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install
 
+      - name: Sync tests with testomat
+        run: npm run test:sync:testomat
+
       - name: Run tests
         run: npm test

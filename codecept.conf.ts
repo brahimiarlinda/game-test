@@ -9,7 +9,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './*_test.ts',
+  tests: './tests/*_test.ts',
   output: './output',
   helpers: {
     Playwright: {
@@ -29,6 +29,13 @@ export const config: CodeceptJS.MainConfig = {
     LandingPage: './support/page-objects/LandingPage.ts',
     GamePage: './support/page-objects/GamePage.ts',
     HelpPage: './support/page-objects/HelpPage.ts'
+  },
+  plugins: {
+    testomatio: {
+      enabled: true,
+      require: '@testomatio/reporter/lib/adapter/codecept',
+      apiKey: 'tstmt_k0MxTKm8wzrZv8TzMAXlS-b262YEMPdlqg1716626255',
+    }
   },
   name: 'game-test'
 }
