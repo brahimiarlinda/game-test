@@ -10,7 +10,7 @@ Scenario('I validate navigation to a page',  async () => {
     I.amOnPage('/');
 
     I.say('I accept the cookies')
-    await Cookies.acceptCookies();
+    I.click(Cookies.acceptAllCookiesButton);
 
     I.say('I verify that the “ZEAL Instant Games” teaser section is present ');
     I.waitForVisible(LandingPage.instantGamesTeaser);
