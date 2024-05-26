@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "test": "codeceptjs run --steps",
+        "test": "DEBUG=@testomatio/reporter:file-uploader codeceptjs run --steps",
         "test:sync:testomat": "TESTOMATIO=tstmt_k0MxTKm8wzrZv8TzMAXlS-b262YEMPdlqg1716626255 npx check-tests@latest CodeceptJS \"tests/*_test.ts\" --typescript",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps"
     },
