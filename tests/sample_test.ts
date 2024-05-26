@@ -1,14 +1,14 @@
 const {I, Cookies, LandingPage, GamePage, HelpPage} = inject();
 const baseUrl = 'https://games.lotto24.de';
 
-Feature('Navigation to help page');
+Feature('Navigation to the help page');
 
 Scenario('I can navigate from the game page, to the help page and back to the game page',  async () => {
     I.say(`I am on the landing page ${baseUrl}`);
     I.amOnPage('/');
 
-    I.say('I accept the cookies')
-    I.click(Cookies.acceptAllCookiesButton);
+    I.say('I accept the cookies if the component exists')
+    await Cookies.acceptCookiesIfExist();
 
     I.say('I verify that the “ZEAL Instant Games” teaser section is present ');
     I.waitForVisible(LandingPage.instantGamesTeaser);
@@ -49,8 +49,8 @@ Scenario('I can navigate from the game page to the help page',  async () => {
     I.say(`I am on the landing page ${baseUrl}`);
     I.amOnPage('/');
 
-    I.say('I accept the cookies')
-    I.click(Cookies.acceptAllCookiesButton);
+    I.say('I accept the cookies if the component exists')
+    await Cookies.acceptCookiesIfExist();
 
     I.say('I scroll to the instant games and click on the third one');
     I.scrollTo(LandingPage.instantGamesSection);
@@ -76,8 +76,8 @@ Scenario('I can navigate from the help page back to the respective game',  async
     I.say(`I am on the landing page ${baseUrl}`);
     I.amOnPage('/');
 
-    I.say('I accept the cookies')
-    I.click(Cookies.acceptAllCookiesButton);
+    I.say('I accept the cookies if the component exists')
+    await Cookies.acceptCookiesIfExist();
 
     I.say('I scroll to the instant games and click on the third one');
     I.scrollTo(LandingPage.instantGamesSection);
