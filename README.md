@@ -14,15 +14,17 @@ To get started with this project, follow the instructions below.
 
 Requirements: node version minimum 18
 
-First, clone the repository and navigate to the project directory:
+First, run the command below to ensure you are using the necessary node version:
 
 ```bash
 nmv use
 ```
 
+Then, clone the repository and navigate to the project directory:
+
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone git@github.com:brahimiarlinda/game-test.git
+cd game-test
 ```
 
 Then, install the project dependencies using npm:
@@ -44,3 +46,5 @@ The test results are shown in
 ## Todo
 
 1. Create environmental variables for the secrets
+2. Currently, the tests fail in the pipeline because of security reasons
+![Screenshot](./support/assets/failure.png) 
